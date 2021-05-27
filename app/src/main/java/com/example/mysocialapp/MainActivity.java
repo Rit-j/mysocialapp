@@ -42,9 +42,9 @@ public class MainActivity extends AppCompatActivity
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        t1=(TextInputLayout)findViewById(R.id.email);
-        t2=(TextInputLayout)findViewById(R.id.pwd);
-        bar=(ProgressBar)findViewById(R.id.progressBar3);
+        t1=findViewById(R.id.email);
+        t2=findViewById(R.id.pwd);
+        bar=findViewById(R.id.progressBar3);
         mAuth = FirebaseAuth.getInstance();
     }
 
