@@ -43,9 +43,9 @@ public class login extends AppCompatActivity {
             }
         });
 
-        t1=(TextInputLayout)findViewById(R.id.email_login);
-        t2=(TextInputLayout)findViewById(R.id.pwd_login);
-        bar=(ProgressBar)findViewById(R.id.progressBar3_login);
+        t1 = findViewById(R.id.email_login);
+        t2 = findViewById(R.id.pwd_login);
+        bar = findViewById(R.id.progressBar3_login);
         mAuth = FirebaseAuth.getInstance();
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -59,8 +59,8 @@ public class login extends AppCompatActivity {
     public void signinhere(View view)
     {
         bar.setVisibility(View.VISIBLE);
-        String email=t1.getEditText().getText().toString();
-        String password=t2.getEditText().getText().toString();
+        String email = t1.getEditText().getText().toString();
+        String password = t2.getEditText().getText().toString();
 
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(login.this, new OnCompleteListener<AuthResult>() {
@@ -69,7 +69,7 @@ public class login extends AppCompatActivity {
                         if (task.isSuccessful())
                         {
                             bar.setVisibility(View.INVISIBLE);
-                            Intent intent=new Intent(login.this,dashboard.class);
+                            Intent intent = new Intent(login.this,dashboard.class);
                             intent.putExtra("email",mAuth.getCurrentUser().getEmail());
                             intent.putExtra("uid",mAuth.getCurrentUser().getUid());
                             startActivity(intent);
