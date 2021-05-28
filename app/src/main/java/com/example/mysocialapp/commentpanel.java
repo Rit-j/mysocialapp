@@ -46,18 +46,18 @@ public class commentpanel extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_commentpanel);
 
-        postkey=getIntent().getStringExtra("postkey");
+        postkey = getIntent().getStringExtra("postkey");
 
-        userref= FirebaseDatabase.getInstance().getReference().child("userprofile");
-        commentref=FirebaseDatabase.getInstance().getReference().child("myimages").child(postkey).child("comments");
+        userref = FirebaseDatabase.getInstance().getReference().child("userprofile");
+        commentref = FirebaseDatabase.getInstance().getReference().child("myimages").child(postkey).child("comments");
 
-        FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
-        final String userId=user.getUid();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        final String userId = user.getUid();
 
-        commenttext=(EditText)findViewById(R.id.comment_text);
-        commentsubmit=(Button)findViewById(R.id.comment_submit);
+        commenttext = findViewById(R.id.comment_text);
+        commentsubmit = findViewById(R.id.comment_submit);
 
-        recview=(RecyclerView)findViewById(R.id.comment_recview);
+        recview = findViewById(R.id.comment_recview);
         recview.setLayoutManager(new LinearLayoutManager(this));
 
         commentsubmit.setOnClickListener(new View.OnClickListener() {
