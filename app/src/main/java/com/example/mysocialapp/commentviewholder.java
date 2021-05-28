@@ -17,9 +17,9 @@ public class commentviewholder extends RecyclerView.ViewHolder
     public commentviewholder(@NonNull View itemView) {
         super(itemView);
 
-        cuimage=itemView.findViewById(R.id.cuimage);
-        cuname=itemView.findViewById(R.id.cuname);
-        cumessage=itemView.findViewById(R.id.cumessage);
-        cudt=itemView.findViewById(R.id.cudt);
+        cuimage = itemView.findViewById(R.id.cuimage);
+        cuname = itemView.findViewById(R.id.cuname);
+        cumessage = itemView.findViewById(R.id.cumessage);
+        cudt = itemView.findViewById(R.id.cudt);
     }
 }
