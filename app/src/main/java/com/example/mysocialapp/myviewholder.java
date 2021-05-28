@@ -29,9 +29,9 @@ public class myviewholder extends RecyclerView.ViewHolder {
 
         setImage = itemView.findViewById(R.id.setImage);
 
-        like_btn = (ImageView) itemView.findViewById(R.id.like_btn);
-        like_text = (TextView) itemView.findViewById(R.id.like_text);
-        comment_btn = (ImageView) itemView.findViewById(R.id.comment_btn);
+        like_btn = itemView.findViewById(R.id.like_btn);
+        like_text = itemView.findViewById(R.id.like_text);
+        comment_btn = itemView.findViewById(R.id.comment_btn);
         date = itemView.findViewById(R.id.date);
     }
 
