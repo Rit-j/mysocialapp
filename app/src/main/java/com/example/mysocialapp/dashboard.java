@@ -40,9 +40,17 @@ public class dashboard extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         setTitle("Social App");
+        
+        FloatingActionButton fab = findViewById(R.id.floatingActionButton);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(dashboard.this,addimage.class));
+            }
+        });
 
         likereference=FirebaseDatabase.getInstance().getReference("likes");
-
+        
         recview = findViewById(R.id.recview);
         recview.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, true));
 
