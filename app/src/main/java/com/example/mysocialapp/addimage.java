@@ -112,8 +112,7 @@ public class addimage extends AppCompatActivity {
         if(requestCode==101 && resultCode==RESULT_OK)
         {
             imageuri=data.getData();
-            Picasso.get().load(imageuri).into(imageView);
-
+            Glide.with(getApplicationContext()).load(imageuri).into(imageView);
         }
 
     }
